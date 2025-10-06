@@ -4,32 +4,32 @@ import java.util.Scanner;
 
 public class TicTacToe {
     
-    public static String[] gameboard = {" ", " ", " |", " ", " ", " |", " ", " ", " ", 
+    private static String[] gameboard = {" ", " ", " |", " ", " ", " |", " ", " ", " ", 
         "-----------", 
         " ", " ", " |", " ", " ", " |", " ", " ", " ", 
         "-----------", 
         " ", " ", " |", " ", " ", " |", " ", " ", " "};
 
-    public static String[] clearboard = {" ", " ", " |", " ", " ", " |", " ", " ", " ", 
+    private static String[] clearboard = {" ", " ", " |", " ", " ", " |", " ", " ", " ", 
         "-----------", 
         " ", " ", " |", " ", " ", " |", " ", " ", " ", 
         "-----------", 
         " ", " ", " |", " ", " ", " |", " ", " ", " "};
 
-    public static String p1;
-    public static String p2;
-    public static int turn = 1; //for turns, default is 1, which is o, 2 is x and so on alternating
-    public static int t1 = 1;
-    public static int t2 = 4;
-    public static int t3 = 7;
-    public static int t4 = 11;
-    public static int t5 = 14;
-    public static int t6 = 17;
-    public static int t7 = 21;
-    public static int t8 = 24;
-    public static int t9 = 27;
-    public static int tile;
-    public static Scanner input = new Scanner(System.in);
+    private static String p1;
+    private static String p2;
+    private static int turn = 1; //for turns, default is 1, which is o, 2 is x and so on alternating
+    private static int t1 = 1;
+    private static int t2 = 4;
+    private static int t3 = 7;
+    private static int t4 = 11;
+    private static int t5 = 14;
+    private static int t6 = 17;
+    private static int t7 = 21;
+    private static int t8 = 24;
+    private static int t9 = 27;
+    private static int tile;
+    private static Scanner input = new Scanner(System.in);
 // x win is 1, o win is 0;
 
 //win conditions
