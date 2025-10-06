@@ -53,7 +53,7 @@ public class TicTacToe {
 // vector<int> win7 = {1, 14, 27};
 // vector<int> win8 = {7, 14, 21};
 
-    public static int checkWinx() {
+    private static int checkWinx() {
         ArrayList<Integer> xTiles = new ArrayList<Integer>();
         for (int i = 0; i < gameboard.length; i++) {
             if (gameboard[i] == "x") {
@@ -167,7 +167,7 @@ public class TicTacToe {
         return 0;
     }
 
-    public static int checkWino() {
+    private static int checkWino() {
         ArrayList<Integer> xTiles = new ArrayList<Integer>();
         for (int i = 0; i < gameboard.length; i++) {
             if (gameboard[i] == "o") {
@@ -281,7 +281,7 @@ public class TicTacToe {
         return 0;
     }
 
-    public static int getTile() {
+    private static int getTile() {
         boolean check = true;
         do {
             System.out.print("\n\nPlease enter the number of the tile you would like to place your mark.");
@@ -301,7 +301,7 @@ public class TicTacToe {
         return tile;
     }
 
-    public static int tileConversion(int tile) {
+    private static int tileConversion(int tile) {
         if (tile == 1) {
             return t1;
         } else if (tile == 2) {
@@ -323,7 +323,7 @@ public class TicTacToe {
         }
     }
 
-    public static boolean tileCheck(int tile) {
+    private static boolean tileCheck(int tile) {
         if (gameboard[tile] != " ") {
             System.out.println("Tile is already marked.");
             return false;
@@ -332,7 +332,7 @@ public class TicTacToe {
         return true;
     }
 
-    public static void fillTile() { //t for tile
+    private static void fillTile() { //t for tile
         if ((turn % 2) == 0) {
             int rt = getTile(); //requested tile
             int rtc = tileConversion(rt); //requested tile converted
@@ -361,7 +361,7 @@ public class TicTacToe {
     
     }
 
-    public static void instructions() {
+    private static void instructions() {
         System.out.print("Welcome to the Tic-Tac-Toe game!\n\n");
         System.out.print("Please enter the name of player 1: ");
         p1 = input.nextLine();
@@ -383,7 +383,7 @@ public class TicTacToe {
         }
     };
 
-    public static void game() {
+    public void game() {
         instructions();
         System.out.println("\n");
         for (int i = 0; i < gameboard.length; i++) {
@@ -422,7 +422,7 @@ public class TicTacToe {
 
     }
 
-    public static void clear() {
+    public void clear() {
         for (int i = 0; i < gameboard.length; i++) {
             gameboard[i] = clearboard[i];
         }
@@ -435,7 +435,8 @@ public class TicTacToe {
         String in;
         boolean check = false;
         do {
-            game();
+            TicTacToe game = new TicTacToe();
+            game.game();
             do {
                 System.out.println("Would you like to play again? Enter Y/N: ");
                 in = input.next();
@@ -451,7 +452,7 @@ public class TicTacToe {
                 }
             input.nextLine();
             } while (check);
-            clear();
+            game.clear();
         } while (playAgain);
         input.close();
     }
