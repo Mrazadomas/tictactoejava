@@ -5,8 +5,8 @@ public class Player {
 
     private static Scanner input = new Scanner(System.in);
     private static int tile;
-    private static String p1;
-    private static String p2;
+    private static String p1 = "";
+    private static String p2 = "";
 
 
     public static void instructions() {

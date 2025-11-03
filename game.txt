@@ -1,0 +1,3 @@
+adam wins: 1
+owen wins: 0
+Ties: 0
