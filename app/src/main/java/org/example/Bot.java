@@ -259,12 +259,6 @@ public class Bot {
                 empties.add(tiles[i]);
             }
         }
-
-        // for (int i = 0; i < tiles.length; i++) { // fill all empty spaces with the bot's mark
-        //     if (temp[tiles[i]] == " ") {
-        //         temp[tiles[i]] = mark;
-        //     }
-        // }
         int index;
         for (int i = 0; i < empties.size(); i++) {
             temp[empties.get(i)] = mark;
@@ -275,69 +269,11 @@ public class Bot {
                 temp[empties.get(i)] = " ";
             }
         }
-
-        // int[] winners = checkWin(mark, temp); // find the possible winning conditions and store in an array
-        // ArrayList<Integer> choices = new ArrayList<>();
-        // if (winners != null) {
-        //     for (int i = 0; i < empties.size(); i++) { // seeing if the win conditions match with any of the empty spaces
-        //         for (int x = 0; x < winners.length; x++) {
-        //             if (empties.get(i) == winners[x]) {
-        //                 choices.add(winners[x]);
-        //             }
-        //         }
-        //     }
-        // }
-        // for (int i = 0; i < choices.size(); i++) {
-        //     System.out.println(choices.get(i));
-        // }
-
-        // if (choices.size() > 1) {
-        //     temp = gameboard;
-        //     return false;
-        // }
         return true;
     }
 
     public void blockWin(String markBot, String markHuman, String[] gameboard) {
-        // ArrayList<Integer> empties = new ArrayList<>();
         
-        // String[] temp = {" ", " ", " |", " ", " ", " |", " ", " ", " ", 
-        // "-----------", 
-        // " ", " ", " |", " ", " ", " |", " ", " ", " ", 
-        // "-----------", 
-        // " ", " ", " |", " ", " ", " |", " ", " ", " "};
-
-        // for (int i = 0; i < temp.length; i++) {
-        //     temp[i] = gameboard[i];
-        // }
-
-        // for (int i = 0; i < tiles.length; i++) { // make a list of all the empty spaces
-        //     if (gameboard[tiles[i]] == " ") {
-        //         empties.add(tiles[i]);
-        //     }
-        // }
-
-        // for (int i = 0; i < tiles.length; i++) { // fill all empty spaces with the human's mark
-        //     if (temp[tiles[i]] == " ") {
-        //         temp[tiles[i]] = markHuman;
-        //     }
-        // }
-
-        // int[] winners = checkWin(markHuman, temp); // find the possible winning conditions and store in an array
-        // ArrayList<Integer> choices = new ArrayList<>();
-        // if (winners != null) {
-        //     for (int i = 0; i < empties.size(); i++) { // seeing if the win conditions match with any of the empty spaces
-        //         for (int x = 0; x < winners.length; x++) {
-        //             if (empties.get(i) == winners[x]) {
-        //                 choices.add(winners[x]);
-        //             }
-        //         }
-        //     }
-        // }
-        // int index = choices.get(0); 
-        // // should be a definite mark, should never be any choices that is
-        // // why this line is not random.
-
         gameboard[blockWinIndex] = markBot;
         // finally marking the possible block with the mark.
         System.out.println("\n");
