@@ -259,7 +259,6 @@ public class Bot {
                 empties.add(tiles[i]);
             }
         }
-        int index;
         for (int i = 0; i < empties.size(); i++) {
             temp[empties.get(i)] = mark;
             if ((checkWin(mark, temp)) != null) {
@@ -269,7 +268,7 @@ public class Bot {
                 temp[empties.get(i)] = " ";
             }
         }
-        return true;
+        return false;
     }
 
     public void blockWin(String markBot, String markHuman, String[] gameboard) {
