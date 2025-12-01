@@ -35,7 +35,6 @@ public class CvH {
                     bot.corners("o", gameboard);
                 } else if (bot.blockWinChance("x", gameboard)) { // checks for a chance to block.
                     bot.blockWin("o", "x", gameboard);
-                    System.out.println("hello");
                 } else {
                     bot.findWin("o", gameboard); // this is ultimately either a random move or a win
                 }
