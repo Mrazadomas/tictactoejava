@@ -1,3 +1,3 @@
-adam wins: 1
-owen wins: 0
-Ties: 0
+1 wins: 0
+Computer wins: 3
+Ties: 1

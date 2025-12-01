@@ -8,6 +8,30 @@ public class Player {
     private static String p1 = "";
     private static String p2 = "";
 
+    public static int gameType() {
+        int num = 0;
+        boolean check = true;
+        do {
+            System.out.print("Which mode would you like to play?");
+            System.out.println("\n\n1. Human vs. Human");
+            System.out.println("2. Human vs. Computer");
+            System.out.println("3. Computer vs. Human");
+            if (input.hasNextInt()) {
+                num = input.nextInt();
+                input.nextLine();
+                if ((num >= 1) && (num <= 3)) {
+                    check = false;
+                }
+            } else {
+                System.out.println("Please enter a valid option.");
+                input.nextLine();
+            }
+
+
+        } while (check);
+        return num;
+    }
+
 
     public static void instructions() {
         System.out.print("Welcome to the Tic-Tac-Toe game!\n\n");
@@ -29,7 +53,49 @@ public class Player {
                 System.out.print(board[i]);
             }
         }
-    };
+    }
+
+    public static void instructionsHvBot() {
+        System.out.print("Welcome to the Tic-Tac-Toe game!\n\n");
+        System.out.print("Please enter the name of player 1: ");
+        p1 = input.nextLine();
+        p2 = "Computer";
+        System.out.println("\nPlayer 1 will mark the boxes with o. Player 2 will mark the boxes with x.\n\n");
+        System.out.println("To mark the boxes you will type in the number of the box you wish to fill according to the diagram below.\n");
+        String[] board = {" ", "1", " |", " ", "2", " |", " ", "3", " ", 
+            "----------", 
+            " ", "4", " |", " ", "5", " |", " ", "6", " ", 
+            "----------", 
+            " ", "7", " |", " ", "8", " |", " ", "9", " ",};
+        for (int i = 0; i < board.length; i++) {
+            if ((i == 9) || (i == 19)) {
+                System.out.print("\n" + board[i] + "\n");
+            } else {
+                System.out.print(board[i]);
+            }
+        }
+    }
+
+    public static void instructionsBotvH() {
+        System.out.print("Welcome to the Tic-Tac-Toe game!\n\n");
+        System.out.print("Please enter the name of player 1: ");
+        p1 = "Computer";
+        p2 = input.nextLine();
+        System.out.println("\nPlayer 1 will mark the boxes with o. Player 2 will mark the boxes with x.\n\n");
+        System.out.println("To mark the boxes you will type in the number of the box you wish to fill according to the diagram below.\n");
+        String[] board = {" ", "1", " |", " ", "2", " |", " ", "3", " ", 
+            "----------", 
+            " ", "4", " |", " ", "5", " |", " ", "6", " ", 
+            "----------", 
+            " ", "7", " |", " ", "8", " |", " ", "9", " ",};
+        for (int i = 0; i < board.length; i++) {
+            if ((i == 9) || (i == 19)) {
+                System.out.print("\n" + board[i] + "\n");
+            } else {
+                System.out.print(board[i]);
+            }
+        }
+    }
 
     private static int getTile() {
         boolean check = true;
